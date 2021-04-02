@@ -21,7 +21,7 @@ function setup(){
 
     cat.scale = 0.1
 
-    mouse = createSprite(250, 450, 50, 50);
+    mouse = createSprite(150, 500, 50, 50);
     mouse.addAnimation("eating", mouse1)
     mouse.scale = 0.1
     //text(mouseX + ',' + mouseY, 10, 45);
@@ -34,14 +34,14 @@ function draw() {
     //cat.x = World.mouseX;
     //cat.y = World.mouseY;
 
-    if(cat.x - mouse.x < mouse.width/2 + cat.width/2){
+    if(cat.x - mouse.x < cat.width/2 - mouse.width/2){
          
         cat.velocityX = 0;
         cat.addAnimation("standing", cat3);
         cat.changeAnimation("standing", cat3);
 
         cat.scale = 0.1;
-        cat.x = 150;
+        cat.x = 200;
 
         mouse.addAnimation("stand", mouse3);
         mouse.changeAnimation("stand", mouse3);
